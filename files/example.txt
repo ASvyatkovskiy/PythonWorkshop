@@ -1,0 +1,7 @@
+This is an example text file.
+
+It contains three lines.
+
+Maybe four.
+
+Four, definitely four.
