@@ -29,7 +29,7 @@ python3
 
 in the command line, it will open up a Python REPL, printing out the details on the version of Python.
 
-## Install Anaconda and pip3
+## Install Anaconda and pip
 
 Two package managers are going to use for this course: Anaconda and pip3. 
 These  package managers are also available on Princeton clusters. 
@@ -45,8 +45,6 @@ conda --help
 
 to confirm the installation is succesful.
 
-Note: pip3 should be a part of the stock install for Python > version 3.4.
-
 ## Create isolated Anaconda environment for the course
 
 Once this is installed, create an isolated Anaconda nevironment for today's course, and install ipython notebook in it:
@@ -55,7 +53,10 @@ Once this is installed, create an isolated Anaconda nevironment for today's cour
 conda create -n PythonWorkshop python=3.5.1 anaconda
 source activate PythonWorkshop
 conda install --name PythonWorkshop ipython-notebook=4.0.4
+conda install --name PythonWorkshop pip
 ```
+
+Note: pip3 is a part of the stock install for Python > version 3.4. But we need a different pip - the one from Anaconda to be able to use it inside our isolated environment.
 
 ## Start the interactive notebook
 
