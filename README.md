@@ -25,25 +25,25 @@ source activate PythonWorkshop
 
 ## Install Tensorflow
 
-Select a binary and install protobufs, TensorFlow and Jupyter. For this workshop, we will use CPU-only version of Tensorflow.
+Select a binary and install protobufs, and TensorFlow. For this workshop, we will use CPU-only version of Tensorflow.
 
 Mac users:
 
 ```bash
 #source activate PythonWorkshop
-pip install --upgrade protobuf
+pip install --user --upgrade protobuf
 export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.10.0-py2-none-any.whl
-pip install --upgrade $TF_BINARY_URL
-pip install --upgrade Pillow
+pip install --user --upgrade $TF_BINARY_URL
+pip install --user --upgrade Pillow
 ```
 
 Ubuntu linux users:
 
 ```bash
-sudo apt-get install python-pip python-dev python-matplotlib
+sudo apt-get install --user python-pip python-dev python-matplotlib
 export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.10.0-cp27-none-linux_x86_64.whl
-sudo pip install --upgrade $TF_BINARY_URL
-sudo pip install Pillow
+sudo pip install --user --upgrade $TF_BINARY_URL
+sudo pip install --user --upgrade Pillow
 ```
 
 Test the installation was succesfull, launch the Jupyter notebook
@@ -57,7 +57,7 @@ create a new notebook selecting the Python kernel using your anaconda environmen
 In [1]: import tensorflow as tf
         tf.__version__
         
-Out[1]: 0.10.0'
+Out[1]: 0.10.0
 ```
 
 ### Check-out the git repository with the pre-exercise 
