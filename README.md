@@ -1,11 +1,71 @@
 # Getting started
 
-To get started, check-out the git repository with the exercise:
+To be able to follow the workshop exercises, you are going to need a laptop with Anaconda and Tensorflow installed. Following instruction are geared for Mac or Ubuntu linux users.
+
+## Download and install Anaconda
+
+Please go to the following website: https://www.continuum.io/downloads
+download and install *the latest* Anaconda version for Python 2.7 for your operating system. 
+
+Note: we are going to need Anaconda 4.1.x or later
+
+After that, type:
 
 ```bash
-git clone ttps://github.com/ASvyatkovskiy/PythonWorkshop
-cd PythonWorkshop
+conda --help
 ```
+and read the manual.
+Once Anaconda is ready, download the following requirements file: https://github.com/ASvyatkovskiy/PythonWorkshop/blob/master/requirements.txt
+and proceed with setting up the environment:
+
+```bash
+conda create --name PythonWorkshop --file requirements.txt
+source activate PythonWorkshop
+```
+
+## Install Tensorflow
+
+Select a binary and install protobufs, TensorFlow and Jupyter. For this workshop, we will use CPU-only version of Tensorflow.
+
+Mac users:
+
+```bash
+#source activate PythonWorkshop
+pip install --upgrade protobuf
+export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.10.0-py2-none-any.whl
+pip install --upgrade $TF_BINARY_URL
+pip install --upgrade Pillow
+```
+
+Ubuntu linux users:
+
+```bash
+sudo apt-get install python-pip python-dev python-matplotlib
+export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.10.0-cp27-none-linux_x86_64.whl
+sudo pip install --upgrade $TF_BINARY_URL
+sudo pip install Pillow
+```
+
+Test the installation was succesfull, launch the Jupyter notebook
+
+```bash
+jupyter notebook
+```
+create a new notebook selecting the Python kernel using your anaconda environment from the upper right dropdown menu, and type:
+
+```python
+In [1]: import tensorflow as tf
+        tf.__version__
+        
+Out[1]: 0.10.0'
+```
+
+### Check-out the git repository with the pre-exercise 
+
+```bash
+git clone https://github.com/ASvyatkovskiy/PythonWorkshop
+```
+
 If you do not have git or you do not wish to install it, just download the repository as zip, and unpack it:
 
 ```bash
@@ -15,54 +75,12 @@ wget https://github.com/ASvyatkovskiy/PythonWorkshop/archive/master.zip
 unzip master.zip
 ```
 
-Then change to the the repository folder.
-
-## Install Python3
-
-To install Python3 for this course got to: https://www.python.org/downloads/release/python-351/
-Scroll down to the "Files" section and select file which best matches your OS.
-Once finished with the installation, test it by typing:
-
-```bash
-python3
-```
-
-in the command line, it will open up a Python REPL, printing out the details on the version of Python.
-
-## Install Anaconda and pip
-
-Two package managers are going to use for this course: Anaconda and pip3. 
-These  package managers are also available on Princeton clusters. 
-
-If you have not installed Anaconda yet, please go to this page: https://www.continuum.io/downloads
-and select the version for Python 3 compatible with your operating system.
-
-Type:
-
-```bash
-conda --help
-```
-
-to confirm the installation is succesful.
-
-## Create isolated Anaconda environment for the course
-
-Once this is installed, create an isolated Anaconda nevironment for today's course, and install ipython notebook in it:
-
-```bash
-conda create -n PythonWorkshop python=3.5.1 anaconda
-source activate PythonWorkshop
-conda install --name PythonWorkshop ipython-notebook=4.0.4
-conda install --name PythonWorkshop pip
-```
-
-Note: pip3 is a part of the stock install for Python > version 3.4. But we need a different pip - the one from Anaconda to be able to use it inside our isolated environment.
-
 ## Start the interactive notebook
 
+Change to the the repository folder, and start interactive jupyter (ipython) notebook:
 ```bash
-ipython3 notebook
+cd PythonWorkshop
+jupyter notebook
 ```
 
-After the notebook is opened, navigate to the workshop folder and open the 0.Setup.ipynb from the browser window.
-
+After the notebook is opened, navigate to the workshop folder and open the 1.PythonBasics.ipynb from the browser window.
