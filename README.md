@@ -60,7 +60,7 @@ In [1]: import tensorflow as tf
 Out[1]: 0.10.0
 ```
 
-### Check-out the git repository with the pre-exercise 
+### Check-out the git repository with the exercise 
 
 ```bash
 git clone https://github.com/ASvyatkovskiy/PythonWorkshop
