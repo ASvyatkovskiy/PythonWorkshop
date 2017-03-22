@@ -32,7 +32,7 @@ Mac users:
 ```bash
 #source activate PythonWorkshop
 pip install --user --upgrade protobuf
-export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.10.0-py2-none-any.whl
+export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.0.0-py2-none-any.whl
 pip install --user --upgrade $TF_BINARY_URL
 pip install --user --upgrade Pillow
 ```
@@ -41,7 +41,7 @@ Ubuntu linux users:
 
 ```bash
 sudo apt-get install --user python-pip python-dev python-matplotlib
-export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.10.0-cp27-none-linux_x86_64.whl
+export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.0.0-cp27-none-linux_x86_64.whl
 sudo pip install --user --upgrade $TF_BINARY_URL
 sudo pip install --user --upgrade Pillow
 ```
@@ -57,7 +57,7 @@ create a new notebook selecting the Python kernel using your anaconda environmen
 In [1]: import tensorflow as tf
         tf.__version__
         
-Out[1]: 0.10.0
+Out[1]: 1.0.0
 ```
 
 ### Check-out the git repository with the exercise 
