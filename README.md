@@ -70,6 +70,7 @@ If you do not have git or you do not wish to install it, just download the repos
 
 ```bash
 wget https://github.com/ASvyatkovskiy/PythonWorkshop/archive/master.zip
+#wget https://github.com/ASvyatkovskiy/PythonWorkshop/archive/Spring2017.zip
 #For Mac users:
 #curl -O https://github.com/ASvyatkovskiy/PythonWorkshop/archive/master.zip
 unzip master.zip
@@ -77,9 +78,10 @@ unzip master.zip
 
 ## Start the interactive notebook
 
-Change to the the repository folder, and start interactive jupyter (ipython) notebook:
+Change to the the repository folder, switch to the `Spring2017` local branch, and start interactive jupyter (ipython) notebook:
 ```bash
 cd PythonWorkshop
+git checkout Spring2017
 jupyter notebook
 ```
 
