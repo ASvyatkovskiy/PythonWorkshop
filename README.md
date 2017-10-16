@@ -1,13 +1,13 @@
 # Getting started
 
-To be able to follow the workshop exercises, you are going to need a laptop with Anaconda and Tensorflow installed. Following instruction are geared for Mac or Ubuntu linux users.
+To be able to follow the workshop exercises, you are going to need a laptop with Anaconda and several Python packages installed. Following instruction are geared for Mac or Ubuntu linux users.
 
 ## Download and install Anaconda
 
 Please go to the following website: https://www.continuum.io/downloads
 download and install *the latest* Anaconda version for Python 2.7 for your operating system. 
 
-Note: we are going to need Anaconda 4.1.x or later
+Note: we are going to need Anaconda 4.1.x or later (the current latest is 5.0.0)
 
 After that, type:
 
@@ -15,17 +15,39 @@ After that, type:
 conda --help
 ```
 and read the manual.
-Once Anaconda is ready, download the following requirements file: https://github.com/ASvyatkovskiy/PythonWorkshop/blob/master/requirements.txt
+
+
+## Check-out the git repository with the exercise 
+
+Once Anaconda is ready, checkout the course repository and
 and proceed with setting up the environment:
+```bash
+git clone https://github.com/ASvyatkovskiy/PythonWorkshop
+```
+
+If you do not have git and do not wish to install it, just download the repository as zip, and unpack it:
 
 ```bash
+wget https://github.com/ASvyatkovskiy/PythonWorkshop/archive/master.zip
+#For Mac users:
+#curl -O https://github.com/ASvyatkovskiy/PythonWorkshop/archive/master.zip
+unzip master.zip
+```
+
+## Create isolated Anaconda environment
+
+Change into the course folder, then type:
+
+```bash
+#cd PythonWorkshop
 conda create --name PythonWorkshop --file requirements.txt
 source activate PythonWorkshop
 ```
 
-## Install Tensorflow
+### Installing Tensorflow
 
-Select a binary and install protobufs, and TensorFlow. For this workshop, we will use CPU-only version of Tensorflow.
+All of the third-part Python packages should be installed by conda. Some packages might cause installation errors depending on your OS.
+If this happens, select a binary and install protobufs, and TensorFlow. For this workshop, we will use CPU-only version of Tensorflow (feel free to use GPU version, if your laptop has a GPU).
 
 Mac users:
 
@@ -60,28 +82,11 @@ In [1]: import tensorflow as tf
 Out[1]: 1.0.0
 ```
 
-### Check-out the git repository with the exercise 
-
-```bash
-git clone https://github.com/ASvyatkovskiy/PythonWorkshop
-```
-
-If you do not have git or you do not wish to install it, just download the repository as zip, and unpack it:
-
-```bash
-wget https://github.com/ASvyatkovskiy/PythonWorkshop/archive/master.zip
-#wget https://github.com/ASvyatkovskiy/PythonWorkshop/archive/Spring2017.zip
-#For Mac users:
-#curl -O https://github.com/ASvyatkovskiy/PythonWorkshop/archive/master.zip
-unzip master.zip
-```
-
 ## Start the interactive notebook
 
 Change to the the repository folder, switch to the `Spring2017` local branch, and start interactive jupyter (ipython) notebook:
 ```bash
 cd PythonWorkshop
-git checkout Spring2017
 jupyter notebook
 ```
 
