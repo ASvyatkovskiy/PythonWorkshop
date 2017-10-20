@@ -5,3 +5,4 @@ joblib
 cython
 pympler
 tensorflow
+keras
