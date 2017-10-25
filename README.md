@@ -5,7 +5,7 @@ To be able to follow the workshop exercises, you are going to need a laptop with
 ## Download and install Anaconda
 
 Please go to the following website: https://www.continuum.io/downloads
-download and install *the latest* Anaconda version for Python 2.7 (or Python 3.0) for your operating system. 
+download and install *the latest* Anaconda version for Python 2.7 (or Python 3) for your operating system. 
 
 Note: we are going to need Anaconda 4.1.x or later (the current latest is 5.0.0)
 
